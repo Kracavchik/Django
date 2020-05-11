@@ -1,0 +1,14 @@
+{
+ "a":[
+    {"href": "products_all", "name": "все"},
+    {"href": "products_home", "name": "дом"},
+    {"href": "products_office", "name": "офис"},
+    {"href": "products_modern", "name": "модерн"},
+    {"href": "products_classic", "name": "классика"}
+  ],
+  "b":[
+    {"name": "Отличный стул", "desc": "Не оторваться.", "image_src": "product-11.jpg", "alt": "продукт 11"},
+    {"name": "Стул повышенного качества", "desc": "Комфортно.", "image_src": "product-21.jpg", "alt": "продукт 21"},
+    {"name": "Стул премиального качества","desc": "Просто попробуйте.", "image_src": "product-31.jpg", "alt": "продукт 31"}
+  ]
+}
