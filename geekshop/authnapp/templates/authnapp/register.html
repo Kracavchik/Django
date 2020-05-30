@@ -8,5 +8,10 @@
         {{ register_form.as_p }}
         <br>
         <input type="submit" class="form-control" value="зарегестрироваться">
+        <button class="btn btn-round form-control last">
+            <a href="{% url 'main' %}" class="">
+                на главную
+            </a>
+        </button>
     </form>
-{% endblock content%}
+{% endblock content %}

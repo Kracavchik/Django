@@ -15,7 +15,9 @@ def login(request):
         user = auth.authenticate(username=username, password=password)
         if user and user.is_active:
             auth.login(request, user)
-            return HttpResponseRedirect(reverse('main'))
+            if "next_page" in request.POST.keys():
+                return HttpResponseRedirect(request.POST["next_page"])
+            return HttpResponseRedirect(reverse("main"))
 
     content = {'title': title, 'login_form': login_form}
     return render(request, 'authnapp/login.html', content)
@@ -57,5 +59,3 @@ def register(request):
     content = {'title': title, 'register_form': register_form}
 
     return render(request, 'authnapp/register.html', content)
-
-
