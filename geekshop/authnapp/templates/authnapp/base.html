@@ -1,33 +1,38 @@
-<!DOCTYPE html>
 {% load staticfiles %}
+
+<!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<title>
+    <meta charset="utf-8">
+    <title>
         {% block title %}
-            {{ title|title }}
+        {{ title|title }}
         {% endblock %}
     </title>
     {% block css %}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-        <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
     {% endblock %}
-    {% block js %}
 
-    {% endblock %}
+    {% block js %}
+    {% endblock js %}
+
 </head>
+
 <body>
-	<div class="container">
+    <div class="container">
         <div class="login">
             <div class="h2 text-center head">
-                Вход в систему
+                Аутентификация
             </div>
 
             {% block content %}
+            {% endblock content %}
 
-            {% endblock %}
         </div>
-	</div>
+    </div>
 </body>
+
 </html>
